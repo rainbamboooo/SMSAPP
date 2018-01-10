@@ -182,7 +182,7 @@ Team Members:
     students[1] = new NormalStudent("chenjundong", "male", 2015530515);
     students[2] = new NormalStudent("changbowen", "male", 2016530374);
     students[3] = new NormalStudent("tangbinhao", "male", 2016530220);
-    students[4] = new NormalStudent("zhenghaolan", "male", 2015530235);
+    students[4] = new NormalStudent("zhenghaolan", "male", 2015530519);
     students[5] = new NormalStudent("xiaocaiwei", "female", 2016530325);
     students[6] = new NormalStudent("tangpengjin", "female", 2016530172);
     for (int i = 0; i < students.length; i++){
