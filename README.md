@@ -2,49 +2,49 @@
 
 Team Members:
 
-ÀîÓêÖñ 2015530235
+æé›¨ç«¹ 2015530235
 
-³Â¿¡¶« 2015530515
+é™ˆä¿Šä¸œ 2015530515
 
-Ğ¤²ÉŞ± 2016530325
+è‚–é‡‡è–‡ 2016530325
 
-ÌÆÅô½ñ 2016530172
+å”é¹ä»Š 2016530172
 
-²ı²©ÎÄ 2016530374
+æ˜Œåšæ–‡ 2016530374
 
-ÌÆ±òºÀ 2016530220
+å”å½¬è±ª 2016530220
 
-Ö£å°À½ 2015530xxx
+éƒ‘çæ¾œ 2015530xxx
 
-##ÕûÌå¿ò¼Ü
+## æ•´ä½“æ¡†æ¶
 
 ![](https://github.com/rainbamboooo/SMSAPP/raw/master/img/1.png)
 
-## Íê³É½ø¶È
- - Ñ§Éú(³éÏó)Àà
- - ÉçÍÅ(³éÏó)ÀàÓë½Ó¿Ú
- - ÊéÀà
- - ¶şÊÖÊéÃûËÑË÷
- - ¶şÊÖÊé¼Û¸ñÅÅĞò
- - ÉçÍÅ¸ù¾İÑ§ºÅ»òĞÕÃûËÑË÷²¢Ìí¼ÓÑ§Éú
- - ¸ù¾İµ±Ç°GPAºÍÆÚÄ©Õ¼±È¼ÆËãÄÃAÆÚÄ©×îÉÙµÃ·Ö
- - Î¬È¨°¸ÉêËß(×Ô¶¯·¢ËÍÓÊ¼ş¸øÈ¨Òæ²¿)
+## å®Œæˆè¿›åº¦
+ - å­¦ç”Ÿ(æŠ½è±¡)ç±»
+ - ç¤¾å›¢(æŠ½è±¡)ç±»ä¸æ¥å£
+ - ä¹¦ç±»
+ - äºŒæ‰‹ä¹¦åæœç´¢
+ - äºŒæ‰‹ä¹¦ä»·æ ¼æ’åº
+ - ç¤¾å›¢æ ¹æ®å­¦å·æˆ–å§“åæœç´¢å¹¶æ·»åŠ å­¦ç”Ÿ
+ - æ ¹æ®å½“å‰GPAå’ŒæœŸæœ«å æ¯”è®¡ç®—æ‹¿AæœŸæœ«æœ€å°‘å¾—åˆ†
+ - ç»´æƒæ¡ˆç”³è¯‰(è‡ªåŠ¨å‘é€é‚®ä»¶ç»™æƒç›Šéƒ¨)
 
-##ÖªÊ¶µã(Ö»Õ¹Ê¾²¿·Ö)
+## çŸ¥è¯†ç‚¹(åªå±•ç¤ºéƒ¨åˆ†)
 
-### ±äÁ¿ÉùÃ÷/¸³Öµ & Âß¼­ÔËËã/ÊıÑ§ÔËËã
+### å˜é‡å£°æ˜/èµ‹å€¼ & é€»è¾‘è¿ç®—/æ•°å­¦è¿ç®—
 
     double requireAScore = (90 - grade * (1 - percentage/100)) / (percentage/100);
     double requireBScore = (80 - grade * (1 - percentage/100)) / (percentage/100);
 
-### Ìõ¼şÅĞ¶ÏÓï¾ä
+### æ¡ä»¶åˆ¤æ–­è¯­å¥
     if (gender.equals("male") || gender.equals("female")){
         this.gender = gender;
     } else{
         System.out.println("Illegal input");
     }
 
-### Ñ­»·Óï¾ä
+### å¾ªç¯è¯­å¥
 
     public void searchBookName(Book[] data, String x){
         for (int i = 0; i < data.length; i++){
@@ -55,7 +55,7 @@ Team Members:
         }
     }
 
-### ÊäÈë/Êä³ö
+### è¾“å…¥/è¾“å‡º
 
     System.out.println("Please enter your current grade(0-100): ");
     double grade = sc.nextInt();
@@ -63,9 +63,9 @@ Team Members:
     double percentage = sc.nextInt();
     hf.computeFinal(grade, percentage);
     
-### Ç¿ÖÆÀàĞÍ×ª»»/ÒşÊ½ÀàĞÍ×ª»»
+### å¼ºåˆ¶ç±»å‹è½¬æ¢/éšå¼ç±»å‹è½¬æ¢
 
-### Àà¶¨Òå/³ÉÔ±±äÁ¿/º¯Êı
+### ç±»å®šä¹‰/æˆå‘˜å˜é‡/å‡½æ•°
 
     class Book {
         String type;
@@ -81,7 +81,7 @@ Team Members:
         }
     }
     
-### ³éÏóÀà & ·ÃÎÊÆ÷ĞŞ¸ÄÆ÷
+### æŠ½è±¡ç±» & è®¿é—®å™¨ä¿®æ”¹å™¨
 
     public abstract class Student {
         public String name;
@@ -133,7 +133,7 @@ Team Members:
         }
     }
 
-### Àà¼Ì³Ğ
+### ç±»ç»§æ‰¿
 
     public class NormalStudent extends Student {
         NormalStudent(String name, String gender, int number){
@@ -141,7 +141,7 @@ Team Members:
         }
     }
 
-### ½Ó¿Ú¶¨Òå/Ê¹ÓÃ & º¯ÊıÖØÔØ/ÖØĞ´
+### æ¥å£å®šä¹‰/ä½¿ç”¨ & å‡½æ•°é‡è½½/é‡å†™
 
     public interface ClubOperation {
         void sendMessage(String content);
@@ -175,7 +175,7 @@ Team Members:
         
     }
 
-### Êı×é¶¨Òå/±éÀú/¸³Öµ
+### æ•°ç»„å®šä¹‰/éå†/èµ‹å€¼
 
     NormalStudent[] students = new NormalStudent[7];
     students[0] = new NormalStudent("liyuzhu", "male", 2015530235);
@@ -189,7 +189,7 @@ Team Members:
         System.out.println(students[i].toString());
     }
 
-### µİ¹é & ÅÅĞòËã·¨
+### é€’å½’ & æ’åºç®—æ³•
 
     public int searchSchoolNumber(NormalStudent[] data, int x, int start, int end){
         if (end == -1){
