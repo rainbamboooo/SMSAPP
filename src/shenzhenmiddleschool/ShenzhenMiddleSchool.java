@@ -14,6 +14,7 @@ public class ShenzhenMiddleSchool {
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
@@ -32,7 +33,7 @@ public class ShenzhenMiddleSchool {
 //            int num = sc.nextInt();
 //            NormalStudent a = new NormalStudent(name, gender, num);
 //            students[i] = a;
-//        }
+//        
 //        for (int j = 0; j < students.length; j++){
 //            System.out.println(students[j].toString());
 //        }
@@ -42,7 +43,7 @@ public class ShenzhenMiddleSchool {
         students[1] = new NormalStudent("chenjundong", "male", 2015530515);
         students[2] = new NormalStudent("changbowen", "male", 2016530374);
         students[3] = new NormalStudent("tangbinhao", "male", 2016530220);
-        students[4] = new NormalStudent("zhenghaolan", "male", 2015530235);
+        students[4] = new NormalStudent("zhenghaolan", "male", 2015530519);
         students[5] = new NormalStudent("xiaocaiwei", "female", 2016530325);
         students[6] = new NormalStudent("tangpengjin", "female", 2016530172);
         for (int i = 0; i < students.length; i++){
@@ -50,11 +51,11 @@ public class ShenzhenMiddleSchool {
         }
         
         NormalClub club = new NormalClub("cs club", students, "liyuzhu", "1444487777@qq.com", "18588493805");
+        System.out.println(club.toString());
         System.out.println("Search result: ");
         club.addMember(students, 2016530172, 0, -1);
         club.addMember(students, "xiaocaiwei");
-        System.out.println(club.toString());
-                
+        
         Mail mail = new Mail();
         System.out.println("Please enter the mail content: ");
         String content = sc.nextLine();
@@ -63,14 +64,15 @@ public class ShenzhenMiddleSchool {
         mail.sendEmail(subject, content);
         
         System.out.println("Please enter your current grade(0-100): ");
-        double grade = sc.nextInt();
+        double grade = sc.nextDouble();
         System.out.println("Please enter the percentage of final(1-100): ");
-        double percentage = sc.nextInt();
+        double percentage = sc.nextDouble();
         hf.computeFinal(grade, percentage);
         
         System.out.println("Please enter the number of books: ");
         int n = sc.nextInt();
         Book data[] = new Book[n];
+        
         System.out.println("Please enter book information (type, name, price, how much new): ");
         for(int i = 0; i < n; i++){
             data[i] = new Book(sc.next(), sc.next(), sc.nextInt(), sc.nextInt());
@@ -81,11 +83,19 @@ public class ShenzhenMiddleSchool {
         for(int i=0;i<n;i++){
             System.out.println(data[i].GetT() + "\t" + data[i].GetN()+ "\t" + data[i].GetP() + "\t"  + data[i].GetD());
         }
+        hf.sorting2(data, n);
+        System.out.println("New degree from highest to lowest: ");
+        System.out.println("type" + "\t" + "name" + "\t" + "price" + "\t" + "how much new");
+        for(int i=0;i<n;i++){
+            System.out.println(data[i].GetT() + "\t" + data[i].GetN()+ "\t" + data[i].GetP() + "\t"  + data[i].GetD());
+        }
         
         System.out.println("Please enter the book's name you want to search");
         String b_name = sc.next();
         System.out.println("Search result: ");
         hf.searchBookName(data, b_name);
+        
+        return;
     }
     
 }

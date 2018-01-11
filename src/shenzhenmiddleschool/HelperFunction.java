@@ -11,8 +11,8 @@ package shenzhenmiddleschool;
  */
 public class HelperFunction {
     public void computeFinal(double grade, double percentage){
-        double requireAScore = (90 - grade * (1 - percentage/100)) / (percentage/100);
-        double requireBScore = (80 - grade * (1 - percentage/100)) / (percentage/100);
+        int requireAScore = (int) ((90 - grade * (1 - percentage/100)) / (percentage/100));
+        int requireBScore = (int) ((80 - grade * (1 - percentage/100)) / (percentage/100));
         
         System.out.println("You need " + requireAScore + " to get an A");
         System.out.println("You need " + requireBScore + " to get an B");
@@ -31,6 +31,21 @@ public class HelperFunction {
             data[min_ptr] = temp;
         }
     }
+    
+    public void sorting2(Book[] data2,int n){
+        for(int i=0; i<n; i++){
+            int min_ptr2 = i;
+            for(int j=i; j<n; j++){
+                if(data2[j].GetD() > data2[min_ptr2].GetD()){
+                    min_ptr2 = j;
+                }
+            }
+            Book temp2 = data2[i];
+            data2[i] = data2[min_ptr2];
+            data2[min_ptr2] = temp2;
+        }
+    }
+
 
     public void sortSchoolNumber(NormalStudent[] data){
         for(int i=0; i<data.length; i++){
