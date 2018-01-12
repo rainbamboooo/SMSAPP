@@ -1,4 +1,4 @@
-# CS Final: SMS APP
+﻿# CS Final: SMS APP
 
 Team Members:
 
@@ -20,6 +20,13 @@ Team Members:
 
 ![](https://github.com/rainbamboooo/SMSAPP/raw/master/img/1.png)
 
+## UI设计
+![](https://github.com/rainbamboooo/SMSAPP/raw/master/img/2.png)
+![](https://github.com/rainbamboooo/SMSAPP/raw/master/img/3.png)
+![](https://github.com/rainbamboooo/SMSAPP/raw/master/img/4.png)
+![](https://github.com/rainbamboooo/SMSAPP/raw/master/img/5.png)
+![](https://github.com/rainbamboooo/SMSAPP/raw/master/img/6.png)
+
 ## 完成进度
  - 学生(抽象)类
  - 社团(抽象)类与接口
@@ -32,10 +39,15 @@ Team Members:
 
 ## 知识点(只展示部分)
 
-### 变量声明/赋值 & 逻辑运算/数学运算
+### 变量声明/赋值 & 逻辑运算/数学运算 & 强制类型转换/隐式类型转换
 
-    double requireAScore = (90 - grade * (1 - percentage/100)) / (percentage/100);
-    double requireBScore = (80 - grade * (1 - percentage/100)) / (percentage/100);
+    public void computeFinal(double grade, double percentage){
+        int requireAScore = (int) ((90 - grade * (1 - percentage/100)) / (percentage/100));
+        int requireBScore = (int) ((80 - grade * (1 - percentage/100)) / (percentage/100));
+        
+        System.out.println("You need " + requireAScore + " to get an A");
+        System.out.println("You need " + requireBScore + " to get an B");
+    }
 
 ### 条件判断语句
     if (gender.equals("male") || gender.equals("female")){
@@ -58,12 +70,10 @@ Team Members:
 ### 输入/输出
 
     System.out.println("Please enter your current grade(0-100): ");
-    double grade = sc.nextInt();
+    double grade = sc.nextDouble();
     System.out.println("Please enter the percentage of final(1-100): ");
-    double percentage = sc.nextInt();
+    double percentage = sc.nextDouble();
     hf.computeFinal(grade, percentage);
-    
-### 强制类型转换/隐式类型转换
 
 ### 类定义/成员变量/函数
 
@@ -80,7 +90,7 @@ Team Members:
             this.degree = new_degree;
         }
     }
-    
+
 ### 抽象类 & 访问器修改器
 
     public abstract class Student {
@@ -141,7 +151,7 @@ Team Members:
         }
     }
 
-### 接口定义/使用 & 函数重载/重写
+### 接口定义/使用
 
     public interface ClubOperation {
         void sendMessage(String content);
@@ -174,6 +184,11 @@ Team Members:
         }
         
     }
+    
+### 函数重载/重写
+    public String toString(){
+        return "Name: " + name + "\tGender: " + gender + "\tSchool Number: " + schoolNumber;
+    }
 
 ### 数组定义/遍历/赋值
 
@@ -182,7 +197,7 @@ Team Members:
     students[1] = new NormalStudent("chenjundong", "male", 2015530515);
     students[2] = new NormalStudent("changbowen", "male", 2016530374);
     students[3] = new NormalStudent("tangbinhao", "male", 2016530220);
-    students[4] = new NormalStudent("zhenghaolan", "male", 2015530519);
+    students[4] = new NormalStudent("zhenghaolan", "male", 2015530519);
     students[5] = new NormalStudent("xiaocaiwei", "female", 2016530325);
     students[6] = new NormalStudent("tangpengjin", "female", 2016530172);
     for (int i = 0; i < students.length; i++){

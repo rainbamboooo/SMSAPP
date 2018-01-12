@@ -52,7 +52,7 @@ public abstract class Student {
     public int getSchoolNumber(){
         return this.schoolNumber;
     }
-    // Overload
+
     public String toString(){
         return "Name: " + name + "\tGender: " + gender + "\tSchool Number: " + schoolNumber;
     }
